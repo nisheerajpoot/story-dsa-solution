@@ -1,7 +1,7 @@
 package java;
 
 public class platesBetweenCandles {
-     public int[] platesBetweenCandles(String s, int[][] queries) {
+     public int[] platesBetweenCandle(String s, int[][] queries) {
         int n = s.length();
         
         // Prefix sum for plates

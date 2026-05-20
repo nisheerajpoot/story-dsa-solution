@@ -1,3 +1,5 @@
+
+from typing import List
 class plater_between_candles :
     def platesBetweenCandles(self, s: str, queries: List[List[int]]) -> List[int]:
         n = len(s)

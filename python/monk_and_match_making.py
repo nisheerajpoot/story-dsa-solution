@@ -1,6 +1,6 @@
 import sys
 
-def solve():
+def monk_and_match_making():
     input = sys.stdin.readline
     
     # Read the string
@@ -45,5 +45,3 @@ def solve():
         else:
             print("No")
 
-if __name__ == "__main__":
-    solve()

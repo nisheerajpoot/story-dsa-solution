@@ -1,5 +1,8 @@
-class gas_station
-{
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class gas_station {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
         int n = gas.size();
@@ -39,4 +42,3 @@ public:
         return minIndex % n;
     }
 };
-

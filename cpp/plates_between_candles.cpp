@@ -1,3 +1,7 @@
+#include <vector>
+#include <algorithm>
+#include <string>
+using namespace std;
 
 class  plates_between_candles {
 public:

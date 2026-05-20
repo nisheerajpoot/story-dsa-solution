@@ -1,4 +1,6 @@
-def solve(shots, players):
+import bisect
+
+def mr_x_and_his_shots(shots, players):
     n = len(shots)
     m = len(players)
     

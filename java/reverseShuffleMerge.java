@@ -1,11 +1,11 @@
 package java;
 
-import java.util.ArrayDeque;
+//import java.util.ArrayDeque;
 import java.util.Stack;
 
 public class reverseShuffleMerge {
 
-    public static String reverseShuffleMerge(String s) {
+    public static String reverseShuffleMerges(String s) {
         int n = s.length();
         
         // Count frequency of each character in s

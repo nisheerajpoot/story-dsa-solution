@@ -1,3 +1,4 @@
+from collections import Counter
 def reverseShuffleMerge(s):
     # Count frequency of each character in s
     freq = Counter(s)

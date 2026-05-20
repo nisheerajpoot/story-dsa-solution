@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
 string reverseShuffleMerge(string s) {
     int n = s.length();
     
@@ -16,10 +21,10 @@ string reverseShuffleMerge(string s) {
     // Stack to build the answer
     vector<char> result;
     
-    // Track remaining characters and used characters
-    vector<int> remaining(26, 0);
-    remaining = freq;
+    // Track remaining characters
+    vector<int> remaining = freq;  // Direct copy instead of separate assignment
     
+    // Track used characters
     vector<int> used(26, 0);
     
     // Traverse from the end (reverse of s)
@@ -52,3 +57,4 @@ string reverseShuffleMerge(string s) {
     string answer(result.begin(), result.end());
     return answer;
 }
+
