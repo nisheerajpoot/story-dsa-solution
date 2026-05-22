@@ -3,32 +3,29 @@ package java;
 public class kokoEatingBananas {
      public int minEatingSpeed(int[] piles, int h) {
         int left = 1;
-        int right = getMax(piles);
+        int right = piles[0];
+        
+        // Find max in single pass
+        for (int pile : piles) {
+            if (pile > right) right = pile;
+        }
         
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if (canEat(piles, mid, h)) {
+            
+            // Calculate hours with early exit
+            long hours = 0;
+            for (int pile : piles) {
+                hours += (pile - 1) / mid + 1;
+                if (hours > h) break;  // Early exit if already exceeded
+            }
+            
+            if (hours <= h) {
                 right = mid;
             } else {
                 left = mid + 1;
             }
         }
         return left;
-    }
-    
-    private boolean canEat(int[] piles, int k, int h) {
-        long hours = 0;
-        for (int pile : piles) {
-            hours += (pile + k - 1) / k;
-        }
-        return hours <= h;
-    }
-    
-    private int getMax(int[] piles) {
-        int max = 0;
-        for (int pile : piles) {
-            max = Math.max(max, pile);
-        }
-        return max;
     }
 }
